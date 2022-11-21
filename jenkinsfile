@@ -8,7 +8,7 @@ pipeline {
                 # Docker Build
                 sudo docker build -t 642958529262.dkr.ecr.ap-southeast-2.amazonaws.com/static-apache:$BUILD_NUMBER .
                 # ecr Login
-                sudo aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 642958529262.dkr.ecr.ap-southeast-1.amazonaws.com
+                sudo aws ecr get-login-password --region ap-southeast-2 | sudo docker login --username AWS --password-stdin 642958529262.dkr.ecr.ap-southeast-2.amazonaws.com
                 # push the image to ecr
                 sudo docker push 6642958529262.dkr.ecr.ap-southeast-2.amazonaws.com/static-apache:$BUILD_NUMBER '''
             }
