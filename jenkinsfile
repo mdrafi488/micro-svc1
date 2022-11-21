@@ -17,12 +17,14 @@ pipeline {
             steps {
                 sh '''
                 # apply kubectl
+                cd k8s/
                 kubectl apply -f ns.yaml deployment.yaml service.yaml ingress.yaml '''
             }
         }
         stage('Validation') {
             steps {
                 sh '''
+                cd k8s/
                 # apply kubectl
                 kubectl get po -A '''
             }
