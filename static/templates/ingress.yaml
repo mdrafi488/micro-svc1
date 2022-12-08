@@ -71,6 +71,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: demo
   # namespace: apache
 spec:
+  ingressClassName: alb
   rules:
   - host: dev.apishopping.in
     http:
